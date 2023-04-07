@@ -3,12 +3,10 @@ var Red = Math.random(50, 255);
 var Green = Math.random(50, 255);
 var Blue = Math.random(50, 255);
 
-
 // Water color
 var newRed = 210;
 var newGreen = 215;
 var newBlue = 250;
-
 
 // Button enlargement
 var cupWidth = 5;
@@ -21,7 +19,6 @@ var whiteWidth = 3;
 var playWidth = 45;
 var arrowWidth = 8;
 
-
 // Current paint color
 var isRed = false;
 var isGreen = false;
@@ -29,35 +26,29 @@ var isBlue = false;
 var isBlack = false;
 var isWhite = false;
 
-
 // Dropper paint color
 var paint1 = 210;
 var paint2 = 215;
 var paint3 = 250;
-
 
 // Color accuracy
 var goodRed = false;
 var goodGreen = false;
 var goodBlue = false;
 
-
 // Accuracy display
 var display1 = 100;
 var display2 = 100;
-
 
 // Score display and timebar
 var score = 0;
 var time = 595;
 var end = false;
 
-
 draw = function() {
 
 
    background(255, 255, 255);
-
 
    // Color square
    fill(Red, Green, Blue);
@@ -75,7 +66,6 @@ draw = function() {
    line(400, display1+535, 410, display1+545);
    line(400, display1+555, 410, display1+545);
 
-
    // Cup and water
    fill(255, 255, 255);
    stroke(0, 0, 0);
@@ -92,7 +82,6 @@ draw = function() {
    arc(325, 210, 80, 80, 50, 133);
    arc(380, 210, 80, 80, 75, 133);
 
-
    // Score display
    noFill();
    stroke(0, 0, 0);
@@ -103,7 +92,6 @@ draw = function() {
    text(score, 455, 370);
    textSize(30);
    text("Score:", 450, 290);
-
 
    // Time bar
    fill(210, 215, 250);
@@ -142,7 +130,6 @@ draw = function() {
    strokeWeight(5);
    arc(42, 62, 35, 35, 170, 235);
 
-
    // Green paint blob
    fill(38, 224, 38);
    stroke(0, 0, 0);
@@ -166,7 +153,6 @@ draw = function() {
    stroke(255, 255, 255);
    strokeWeight(5);
    arc(162, 62, 35, 35, 170, 235);
-
 
    // Blue paint blob
    fill(0, 0, 255);
@@ -192,7 +178,6 @@ draw = function() {
    strokeWeight(5);
    arc(282, 62, 35, 35, 170, 235);
 
-
    // Black paint blob
    fill(36, 36, 36);
    stroke(0, 0, 0);
@@ -216,7 +201,6 @@ draw = function() {
    stroke(255, 255, 255);
    strokeWeight(5);
    arc(402, 62, 35, 35, 170, 235);
-
 
    // White paint blob
    fill(224, 224, 224);
@@ -242,7 +226,6 @@ draw = function() {
    strokeWeight(5);
    arc(522, 62, 35, 35, 170, 235);
 
-
    // Paint dropper
    stroke(0, 0, 0);
    strokeWeight(5);
@@ -265,7 +248,6 @@ draw = function() {
    line(86, 300, 70, 300);
    noStroke();
    ellipse(90, 195, 30, 30);
-
 
    // Changing dropper color
    if(isRed === true) {
@@ -293,7 +275,6 @@ draw = function() {
        paint2 = 224;
        paint3 = 224;
    }
-
 
    // Button enlargment
    if(mouseX>200 && mouseX<400 && mouseY>200 && mouseY<432) {
