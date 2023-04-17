@@ -47,7 +47,6 @@ var end = false;
 
 draw = function() {
 
-
    background(255, 255, 255);
 
    // Color square
